@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    async function clear() {
+        const index = {
+            "anime": [
+            ]
+        }
+
+        const requestOptions = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify([{index}])
+        }
+
+        try {
+            const response = await fetch('https://myjson.dit.upm.es/api/bins/8uao', requestOptions);
+            if (response.ok) {
+                let datasend = await response.json();
+
+                console.log(datasend, 'PUT');
+
+            } else {
+                console.log(response.status)
+            }
+
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+    clear();
+</script>

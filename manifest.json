@@ -1,0 +1,27 @@
+{
+    "name": "Chapter 27 (MV3)",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "This is Chapter 27",
+    "permissions": [
+      "scripting",
+      "webNavigation",
+      "storage",
+      "activeTab",
+      "tabs"
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "background": {
+      "service_worker": "./JS/background.js"
+    },
+    "action": {
+      "default_title": "I am Chapter 27",
+      "default_popup": "popup.html",
+      "default_icon": {
+        "32": "./IMG/Chapter_27_32.png"
+      }
+    }
+  }
